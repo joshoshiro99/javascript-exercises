@@ -4,11 +4,12 @@
 
 const reverseString = function(inputString) {
  let stringArray = inputString.split("");
- for (let currentPosition = 0; i < inputString.length/2; i++) {
-	 let endingCharacter = inputString-i;
-	 stringArray[i]=stringArray[endingCharacter];
+ let returnString = [];
+ for (let currentPosition = inputString.length-1; currentPosition >= 0; currentPosition--) {
+	 let endingCharacter = inputString[currentPosition]; 
+	 returnString.push(endingCharacter);
  }
- return stringArray.join();
+ return returnString.join("");
 };
 
 // Do not edit below this line

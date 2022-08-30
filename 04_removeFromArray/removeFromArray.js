@@ -1,3 +1,12 @@
+
+const removeFromArray = function(array, ...searchItems){
+ let finalArray;
+ for (let i = 0; i < searchItems.length; i++){
+	 finalArray = removeItemFromArray(array, searchItems[i]);
+ }
+ return finalArray;
+};
+
 //how to solve remove from array: 
 //
 //iterate through array until item at index == searchItem
@@ -11,7 +20,7 @@
 //return array
 
 
-const removeFromArray = function(array, searchItem) {
+const removeItemFromArray = function(array, searchItem) {
  let nextItem = array.length-1; 
  let tempQueue = []; 
  while (array[nextItem] != searchItem) {
@@ -21,7 +30,7 @@ const removeFromArray = function(array, searchItem) {
  }
 
  if (array.length < 1){
-	 return "ERROR did not find searchItem";
+	 return `ERROR did not find ${searchItem}`;
  }
  else {
  	 array.pop();

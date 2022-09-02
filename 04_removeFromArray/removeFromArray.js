@@ -7,23 +7,10 @@ const removeFromArray = function(array, ...searchItems){
  return finalArray;
 };
 
-//how to solve remove from array: 
-//
-//iterate through array until item at index == searchItem
-//create temporary fifo queue
-//loop
-//remove last element from array
-//push to end of temp queue
-//get to searchItem
-//remove searchItem
-//shift items from queue back to array
-//return array
-
-
 const removeItemFromArray = function(array, searchItem) {
  let nextItem = array.length-1; 
  let tempQueue = []; 
- while (array[nextItem] != searchItem) {
+ while (array[nextItem] != searchItem && nextItem >=0) {
 	nextItem--;
  	let lastItem = array.pop();
 	tempQueue.push(lastItem);

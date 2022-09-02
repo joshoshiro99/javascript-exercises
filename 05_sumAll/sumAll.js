@@ -1,9 +1,14 @@
 const sumAll = function(lowerLimit, upperLimit) {
- let sum = 0;
- for(let i = lowerLimit; i <= upperLimit; i++){
-	sum += i;
+ if (lowerLimit >= 0 && upperLimit >= 0) {
+	 if (typeof lowerLimit == "number" && typeof upperLimit == "number") {
+		 let sum = 0;
+		 for(let i = lowerLimit; i <= upperLimit; i++){
+			sum += i;
+ 		 }
+ 		 return sum;
+	}
  }
- return sum;
+ return "ERROR";
 };
 
 // Do not edit below this line

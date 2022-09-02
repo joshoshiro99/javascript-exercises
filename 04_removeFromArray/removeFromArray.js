@@ -16,16 +16,11 @@ const removeItemFromArray = function(array, searchItem) {
 	tempQueue.push(lastItem);
  }
 
- if (array.length < 1){
-	 return `ERROR did not find ${searchItem}`;
- }
- else {
- 	 array.pop();
-	 while (tempQueue.length > 0){
-		 array.push(tempQueue.shift());
-	 }
-	 return array;
- }
+  array.pop();
+  while (tempQueue.length > 0){
+	 array.push(tempQueue.shift());
+  }
+  return array;
  
 };
 

@@ -9,20 +9,24 @@ const removeFromArray = function(array, ...searchItems){
 
 const removeItemFromArray = function(array, searchItem) {
  let nextItem = array.length-1; 
- let tempQueue = []; 
+ let tempQueue = [];
+ console.log(array);
  while (array[nextItem] != searchItem && nextItem >=0) {
 	nextItem--;
  	let lastItem = array.pop();
 	tempQueue.push(lastItem);
  }
-
-  if(array[nextItem] === searchItem) {
+ console.log(array);
+ if(array[nextItem] === searchItem) {
 	  array.pop();
   }
-  while (tempQueue.length > 0){
-	 array.push(tempQueue.shift());
-  }
-  return array;
+ console.log(array);
+ while (tempQueue.length > 0){
+	 let queueItem = tempQueue.pop();
+	 array.push(queueItem);
+ }
+ console.log(array); 
+ return array;
  
 };
 

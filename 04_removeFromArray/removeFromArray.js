@@ -16,7 +16,9 @@ const removeItemFromArray = function(array, searchItem) {
 	tempQueue.push(lastItem);
  }
 
-  array.pop();
+  if(array[nextItem] === searchItem) {
+	  array.pop();
+  }
   while (tempQueue.length > 0){
 	 array.push(tempQueue.shift());
   }
